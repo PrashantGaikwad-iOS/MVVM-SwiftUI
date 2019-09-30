@@ -66,6 +66,7 @@ struct ContentView: View {
                         .padding(.bottom,4)
                         Text("Price: $\(course.price)")
                             .padding(.leading,2)
+                            .foregroundColor(Color.gray)
                     }
                 }
                 .padding(.horizontal,22)
@@ -79,9 +80,10 @@ struct ContentView: View {
                 self.coursesVM.fetchCourses()
             }, label: {
                 Text("Fetch Courses")
-            }))
+            })
+            .foregroundColor(.red)
+            )
         }
-        
     }
 }
 
